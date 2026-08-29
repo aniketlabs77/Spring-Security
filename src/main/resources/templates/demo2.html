@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome to Spring Security</h1>
+		<p>This is Demo 2 page</p>
+	<hr>
+	
+	<p>Welcome : <span th:text=${username}></span></p>
+	
+	<hr>
+	
+	<form action="logout">
+		<button>Logout</button>
+	</form>
+	
+	<hr>
+	<a href="/">Home</a>
+	<br>
+	<br>
+	<a href="/demo1">Demo1</a>
+	<br>
+	<br>
+	<a href="/demo2">Demo2</a>
+	<br>
+	<br>
+	<a href="/demo3">Demo3> </a><br> <br>
+	
+	<hr>
+	
+</body>
+</html>
