@@ -18,8 +18,8 @@ public class MyController {
 	
 	
 	@GetMapping("/demo1")
-	public String demo1(Authentication auth, HttpSession session, ModelMap m) {
-		m.addAttribute("userName", auth.name()); 
+	public String demo1(org.springframework.security.core.Authentication auth, HttpSession session, ModelMap m) {
+		m.addAttribute("username", auth.getName()); 
 		session.setAttribute("cname", "Aniket"); 
 		return "demo1" ; 
 	}
@@ -27,14 +27,14 @@ public class MyController {
 	
 	@GetMapping("/demo2")
 	public String demo2(Authentication auth, ModelMap m) {
-		m.addAttribute("userName", auth.name()); 
-		return "demo1" ; 
+		m.addAttribute("username", auth.name()); 
+		return "demo2" ; 
 	}
 	
 	@GetMapping("/demo3")
 	public String demo3(Authentication auth, ModelMap m) {
-		m.addAttribute("userName", auth.name());  
-		return "demo1" ; 
+		m.addAttribute("username", auth.name());  
+		return "demo3" ; 
 	}
 	
 	@GetMapping("/accessDenied")
