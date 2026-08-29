@@ -1,4 +1,4 @@
-package com.aniket.demo;
+package com.aniket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
