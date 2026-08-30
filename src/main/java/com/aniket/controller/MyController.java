@@ -16,6 +16,10 @@ public class MyController {
 		return "index" ; 
 	}
 	
+	@GetMapping("/applogin")
+	public String login() {
+		return "applogin" ; 
+	}
 	
 	@GetMapping("/demo1")
 	public String demo1(Authentication auth, HttpSession session, ModelMap m) {
@@ -35,6 +39,12 @@ public class MyController {
 	public String demo3(Authentication auth, ModelMap m) {
 		m.addAttribute("username", auth.getName()); 
 		return "demo3" ; 
+	}
+	
+	@GetMapping("/demo4")
+	public String demo4(Authentication auth, ModelMap m) {
+		m.addAttribute("username", auth.getName()); 
+		return "demo4" ; 
 	}
 	
 	@GetMapping("/accessDenied")
